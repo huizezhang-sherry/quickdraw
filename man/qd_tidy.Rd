@@ -9,7 +9,7 @@ qd_tidy(object, item = 1:nrow(object))
 \arguments{
 \item{object}{A tibble object produced by qd_read()}
 
-\item{id}{The row number of drawing to tidy}
+\item{item}{The row number of drawing to tidy}
 }
 \value{
 A tibble object with the x and y coordinate of each stroke

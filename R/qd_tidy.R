@@ -1,6 +1,6 @@
 #'@title qd_tidy
 #'@param object A tibble object produced by qd_read()
-#'@param id The row number of drawing to tidy
+#'@param item The row number of drawing to tidy
 #'@return A tibble object with the x and y coordinate of each stroke
 #'@examples
 #'apple <- qd_read("apple")
