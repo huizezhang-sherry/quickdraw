@@ -1,3 +1,11 @@
+#'@title qd_download download QuickDraw ndjson file
+#'@param category a valid QuickDraw category
+#'@details Copy the ndjson file from Google Cloud to the cache directory
+#'@return The file path to the ndjson
+#'@examples
+#'qd_download("apple")
+#'@export
+
 qd_download <- function(category){
 
   # validation check
