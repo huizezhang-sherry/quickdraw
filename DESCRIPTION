@@ -18,4 +18,5 @@ RoxygenNote: 6.1.1
 Imports: 
     cloudml,
     tibble,
-    corpus
+    corpus,
+    magrittr
