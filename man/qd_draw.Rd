@@ -4,10 +4,12 @@
 \alias{qd_draw}
 \title{qd_draw}
 \usage{
-qd_draw(object)
+qd_draw(object, animate = FALSE)
 }
 \arguments{
 \item{object}{A tibble object produced by qd_tidy()}
+
+\item{animate}{An option to display the QuickDraw in animation}
 }
 \value{
 An animation of the quick draw
