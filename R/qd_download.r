@@ -9,7 +9,8 @@
 qd_download <- function(category){
 
   # validation check
-  stopifnot(category %in% categories)
+
+  stopifnot(category %in% qd_categories())
   stopifnot(length(category) == 1)
 
   cache <- qd_cache()
