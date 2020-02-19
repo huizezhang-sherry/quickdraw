@@ -1,13 +1,15 @@
 Package: quickdraw
-Title: What the Package Does (One Line, Title Case)
+Title: An API for pulling QuickDraw data from Google
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    c(person(given = "Sherry",
+           family = "Zhang",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "huizezhangsh@gmail.com"),
+    person(given = "Stuart",
+           family = "Lee",
+           role = c("aut", "ctb")))
+Description: The package provides an API to download, read and cache QuickDraw data from (here)[https://github.com/googlecreativelab/quickdraw-dataset]. It also provides functionality for plotting and animating the individual drawing based on the coordinate stored in the data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -15,8 +17,14 @@ URL: https://github.com/huizezhang-sherry/quickdraw
 BugReports: https://github.com/huizezhang-sherry/quickdraw/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
+Depends: R (>= 3.6.0)
 Imports: 
     cloudml,
     tibble,
     corpus,
-    magrittr
+    magrittr,
+    ggplot2,
+    dplyr,
+    gganimate,
+    purrr,
+    rlang
