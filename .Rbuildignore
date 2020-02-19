@@ -1,2 +1,4 @@
 ^quickdraw\.Rproj$
 ^\.Rproj\.user$
+^LICENSE\.md$
+^data-raw$
