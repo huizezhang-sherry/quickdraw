@@ -21,7 +21,7 @@ qd_download <- function(category){
   if (file.exists(outfile)) {
     message("QuickDraw file:", name, " already exists!")
   } else {
-    message("Downloading ndjson with cloudml")
+    message("Downloading ", name,  " with cloudml")
     url <- paste0("gs://quickdraw_dataset/full/simplified/", name)
     cloudml::gs_copy(url, cache)
   }

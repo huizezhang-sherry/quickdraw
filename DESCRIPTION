@@ -9,7 +9,7 @@ Authors@R:
     person(given = "Stuart",
            family = "Lee",
            role = c("aut", "ctb")))
-Description: The package provides an API to download, read and cache QuickDraw data from (here)[https://github.com/googlecreativelab/quickdraw-dataset]. It also provides functionality for plotting and animating the individual drawing based on the coordinate stored in the data.
+Description: The package provides an API to download, read and cache QuickDraw data from (here)[https://github.com/googlecreativelab/quickdraw-dataset]. It also provides functionality for plotting and animating the individual drawing based on the coordinates stored in the data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
