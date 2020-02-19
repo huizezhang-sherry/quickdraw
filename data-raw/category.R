@@ -1,3 +1,6 @@
 ## code to prepare `category` dataset goes here
 
-usethis::use_data("category")
+categories <- readLines("data-raw/categories.txt")
+
+usethis::use_data(categories)
+
