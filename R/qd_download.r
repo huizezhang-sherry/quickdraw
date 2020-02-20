@@ -4,7 +4,8 @@
 #' * `qd_download()`: retrieves and caches drawings in ndjson file
 #' * `qd_download_bitmap()`: retrieves and caches drawings in numpy bitmap format. 
 #'  
-#'@return A character vector containing 
+#'@return A character vector containing the file path
+#'of the downloaded category
 #'@examples
 #'qd_download("apple")
 #'@export
