@@ -7,9 +7,13 @@
 #'@export
 
 qd_read <- function(category,verbose = TRUE){
-  suppressMessages()
 
-  path <- qd_download(category)
+
+  path <- if (verbose) {
+    qd_download(category)
+  } else {
+    suppressMessages(qd_download(category))
+  }
 
   tibble::as.tibble(corpus::read_ndjson(path))
 }
