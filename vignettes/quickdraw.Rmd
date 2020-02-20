@@ -43,6 +43,6 @@ You could also animate multiple drawings with
 
 ```{r}
 octopus %>% 
-  qd_tidy(sample.int(6, nrow(octopus))) %>% 
+  qd_tidy(sample.int(nrow(octopus), 6)) %>% 
   qd_draw(animate = TRUE)
 ```
