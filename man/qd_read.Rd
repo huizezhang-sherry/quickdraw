@@ -4,7 +4,7 @@
 \alias{qd_read}
 \title{qd_read}
 \usage{
-qd_read(category)
+qd_read(category, verbose = TRUE)
 }
 \arguments{
 \item{category}{a valid QuickDraw category}

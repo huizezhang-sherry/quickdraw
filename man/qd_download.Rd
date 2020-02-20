@@ -2,21 +2,27 @@
 % Please edit documentation in R/qd_download.r
 \name{qd_download}
 \alias{qd_download}
-\title{qd_download download QuickDraw ndjson file}
+\alias{qd_download_bitmap}
+\title{qd_download download QuickDraw files}
 \usage{
 qd_download(category)
+
+qd_download_bitmap(category)
 }
 \arguments{
 \item{category}{a valid QuickDraw category}
 }
 \value{
-The file path to the ndjson
+A character vector containing
 }
 \description{
-qd_download download QuickDraw ndjson file
+qd_download download QuickDraw files
 }
 \details{
-Copy the ndjson file from Google Cloud to the cache directory
+\itemize{
+\item \code{qd_download()}: retrieves and caches drawings in ndjson file
+\item \code{qd_download_bitmap()}: retrieves and caches drawings in numpy bitmap format.
+}
 }
 \examples{
 qd_download("apple")

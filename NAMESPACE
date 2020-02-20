@@ -3,6 +3,7 @@
 export("%>%")
 export(qd_categories)
 export(qd_download)
+export(qd_download_bitmap)
 export(qd_draw)
 export(qd_read)
 export(qd_sample)

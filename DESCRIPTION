@@ -16,7 +16,7 @@ LazyData: true
 URL: https://github.com/huizezhang-sherry/quickdraw
 BugReports: https://github.com/huizezhang-sherry/quickdraw/issues
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 Depends: R (>= 3.6.0)
 Imports: 
     cloudml,
