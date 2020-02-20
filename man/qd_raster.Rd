@@ -16,5 +16,5 @@ a tibble object with x and y coordinate of the raster matrix
 qd_raster
 }
 \examples{
-qd_read("apple") \%>\% tidy(1) \%>\% qd_raster()
+qd_read("apple") \%>\% qd_tidy(1) \%>\% qd_raster()
 }

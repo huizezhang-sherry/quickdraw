@@ -2,7 +2,7 @@
 #'@param data a tibble object resulted from qd_tidy()
 #'@return a tibble object with x and y coordinate of the raster matrix
 #'@examples
-#'qd_read("apple") %>% tidy(1) %>% qd_raster()
+#'qd_read("apple") %>% qd_tidy(1) %>% qd_raster()
 #'@export qd_raster
 qd_raster <- function(data){
 

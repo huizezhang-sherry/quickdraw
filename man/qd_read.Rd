@@ -11,6 +11,8 @@ qd_read_bitmap(category)
 }
 \arguments{
 \item{category}{a valid QuickDraw category}
+
+\item{verbose}{avoid qd_download() message if verbose = TRUE}
 }
 \description{
 Load a QuickDraw category as an R object
