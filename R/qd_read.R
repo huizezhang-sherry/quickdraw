@@ -13,3 +13,14 @@ qd_read <- function(category,verbose = TRUE){
 
   tibble::as.tibble(corpus::read_ndjson(path))
 }
+
+qd_read_bitmap <- function(category) {
+  if (!requireNamespace("reticulate", quietly = TRUE)) {
+    stop("reticulate required to read npy bitmaps")
+  }
+  
+  np <- reticulate::import("numpy")
+  path <- qd_download_bitmap(category)
+  np$load(path)
+}
+
