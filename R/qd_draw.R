@@ -23,11 +23,12 @@ qd_draw <- function(object, animate = FALSE){
 
   plot <- object_to_plot %>%
     ggplot(aes(x = !!x, y = !!y, group = !!stroke)) +
-    geom_line() +
-    xlim(c(0, 256)) +
-    ylim(c(0, 256))  +
+    geom_path() +
+    xlim(c(0, 255)) +
+    ylim(c(0, 255))  +
     theme_void() +
-    facet_wrap(vars(!!item))
+    facet_wrap(vars(!!item)) +
+    theme(strip.text = element_blank())
 
   if(animate){
     plot <- plot + gganimate::transition_reveal(!!id)
