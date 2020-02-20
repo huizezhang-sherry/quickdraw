@@ -6,7 +6,9 @@
 #'qd_read("apple")
 #'@export
 
-qd_read <- function(category){
+qd_read <- function(category,verbose = TRUE){
+  suppressMessages()
+
   path <- qd_download(category)
 
   tibble::as.tibble(corpus::read_ndjson(path))
