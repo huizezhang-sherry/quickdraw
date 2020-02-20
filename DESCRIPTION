@@ -27,4 +27,6 @@ Imports:
     dplyr,
     gganimate,
     purrr,
-    rlang
+    rlang,
+    tidyr,
+    stats
