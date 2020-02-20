@@ -19,7 +19,7 @@ qd_download <- function(category){
   outfile <- file.path(cache, name)
 
   if (file.exists(outfile)) {
-    message("QuickDraw file:", name, " already exists!")
+    message("QuickDraw file: ", name, " has been downloaded already!")
   } else {
     message("Downloading ", name,  " with cloudml")
     url <- paste0("gs://quickdraw_dataset/full/simplified/", name)
