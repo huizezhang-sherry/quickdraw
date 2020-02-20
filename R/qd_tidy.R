@@ -13,7 +13,7 @@ qd_tidy <- function(object, item = 1:nrow(object)){
   tidy_single <- function(id){
     purrr::map_dfr(object$drawing[[id]], function(id){
       tibble::tibble(x = id[[1]],
-                     y = 256 - id[[2]])
+                     y = 255 - id[[2]])
     },.id = "stroke")
   }
 
