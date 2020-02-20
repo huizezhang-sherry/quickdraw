@@ -13,7 +13,8 @@ qd_download_bitmap(category)
 \item{category}{a valid QuickDraw category}
 }
 \value{
-A character vector containing
+A character vector containing the file path
+of the downloaded category
 }
 \description{
 qd_download download QuickDraw files

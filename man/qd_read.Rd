@@ -2,21 +2,29 @@
 % Please edit documentation in R/qd_read.R
 \name{qd_read}
 \alias{qd_read}
-\title{qd_read}
+\alias{qd_read_bitmap}
+\title{Load a QuickDraw category as an R object}
 \usage{
 qd_read(category, verbose = TRUE)
+
+qd_read_bitmap(category)
 }
 \arguments{
 \item{category}{a valid QuickDraw category}
 }
-\value{
-A tibble object contains 6 columns: word, countrycode, timestamp, recognized, key_id and drawing.
-}
 \description{
-qd_read
+Load a QuickDraw category as an R object
 }
 \details{
-Read in the QuickDraw ndjson file downloaded by qd_download()
+\itemize{
+\item \code{qd_read()}: loads a QuickDraw ndjson file as a \code{\link[tibble:tibble]{tibble::tibble()}},
+containing 6 columns: word, key_id, countrycode, timestamp, recognized,
+drawing.
+\item \code{qd_read_bitmap()}: loads a QuickDraw npy file as an ordinary R matrix,
+requires the \code{reticulate} package, with python and numpy installed. Each
+row of the matrix represents a 28 by 28 bitmap image, so the total dimension
+is n_images * 784.
+}
 }
 \examples{
 qd_read("apple")
