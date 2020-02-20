@@ -1,0 +1,70 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# quickdraw
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The `quickdraw` package allows you to download
+and retrieve the dataset categories from the quickdraw dataset:
+
+
+## Installation
+
+You can install the released version of quickdraw from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("quickdraw")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("huizezhang-sherry/quickdraw")
+```
+
+
+## Data Retrieval
+
+Data files are cached and retrieved using 
+the `qd_read` function:
+```{r setup}
+library(quickdraw)
+
+octopus <- qd_read("octopus")
+octopus
+```
+
+The last column is a nested list which is a drawing made, it consists of the x,y coordinates for each stroke:
+
+You can draw a pic with `qd_tidy` and `qd_draw`
+
+```{r}
+octopus %>% 
+  qd_tidy(10) %>% 
+  qd_draw()
+```
+
+You could also animate multiple drawings with
+`qd_draw`
+
+```{r}
+octopus %>% 
+  qd_tidy(sample.int(nrow(octopus), 6)) %>% 
+  qd_draw(animate = TRUE)
+```
+
