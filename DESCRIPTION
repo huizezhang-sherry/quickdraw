@@ -28,3 +28,5 @@ Imports:
     gganimate,
     purrr,
     rlang
+Suggests: 
+    reticulate
