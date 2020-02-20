@@ -1,0 +1,48 @@
+---
+title: "quickdraw: an R interface to quickdraw data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{quickdraw}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The `quickdraw` package allows you to download
+and retrieve the dataset categories from the quickdraw dataset:
+
+## Data Retrieval
+
+Data files are cached and retrieved using 
+the `qd_read` function:
+```{r setup}
+library(quickdraw)
+
+octopus <- qd_read("octopus")
+octopus
+```
+
+The last column is a nested list which is a drawing made, it consists of the x,y coordinates for each stroke:
+
+You can draw a pic with `qd_tidy` and `qd_draw`
+
+```{r}
+octopus %>% 
+  qd_tidy(10) %>% 
+  qd_draw()
+```
+
+You could also animate multiple drawings with
+`qd_draw`
+
+```{r}
+octopus %>% 
+  qd_tidy(sample.int(6, nrow(octopus))) %>% 
+  qd_draw(animate = TRUE)
+```
