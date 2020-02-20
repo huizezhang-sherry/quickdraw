@@ -4,7 +4,7 @@
 #'@details qd_sample() downloads QuickDraw data from multiple categories and take a sample from each category
 #'@return A tibble object that binds the sample data from all catgories.
 #'@examples
-#'qd_sampe(c("octopus", "star"), 5)
+#'qd_sample(c("octopus", "star"), 5)
 #'@export
 
 qd_sample <- function(categories, size){
