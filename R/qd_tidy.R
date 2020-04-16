@@ -14,7 +14,13 @@ qd_tidy <- function(object, item = 1:nrow(object)){
     purrr::map_dfr(object$drawing[[id]], function(id){
       tibble::tibble(x = id[[1]],
                      y = 255 - id[[2]])
-    },.id = "stroke")
+    },.id = "stroke") %>%
+      dplyr::mutate(word = object$word[id],
+                    countrycode = object$countrycode[id],
+                    timestamp = object$timestamp[id],
+                    recognised = object$recognized[id],
+                    key_id = object$key_id[id])
+
   }
 
   if(length(item) > 100) message("QuickDraw could be slow when loading large number of draws")
