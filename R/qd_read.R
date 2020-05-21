@@ -21,7 +21,7 @@ qd_read <- function(category,verbose = TRUE){
     suppressMessages(qd_download(category))
   }
 
-  tibble::as.tibble(corpus::read_ndjson(path))
+  tibble::as_tibble(corpus::read_ndjson(path))
 }
 
 #'@export
