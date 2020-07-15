@@ -55,6 +55,8 @@ octopus
 The last column is a nested list which is a drawing made, it consists of
 the x,y coordinates for each stroke:
 
+*You will have to properly install the R package `cloudml` and a command line tool, gsutil, for `qd_read()` to read data properly from Google Cloud Storage. To install gsutil, type `cloudml::gcloud_install()` in the console and follow the instructions.*
+
 You can draw a pic with `qd_tidy` and `qd_draw`
 
 ``` r
